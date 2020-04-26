@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap');
+:root {
+    --red: #6d2e46;      /* rgb(109, 46, 70) */
+    --orange: #a26769;   /* rgb(162, 103, 105) */
+    --vanila: #d5b9b2;   /* rgb(213, 185, 178) */
+    --body: #ece2d0;     /* rgb(236, 226, 208) */
+    --white: #fff;
+    --text: #333;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    background: var(--body);
+    color: var(--text);
+    line-height: 1.7;
+}
+button {
+    background: var(--red);
+    border: none;
+    padding: 15px 40px;
+    color: var(--white);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+button:hover {
+    background: var(--text);
+    cursor: pointer;
+    transition: .4s ease;
+}
+.container {
+    width: 70%;
+    margin: auto;
+}
+/***************************
+grid
+***************************/
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+[class*="col-"] {
+  float: left;
+  padding: 30px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+/***************************
+header
+***************************/
+header {
+    background-image: linear-gradient(rgba(162, 103, 105,.9), rgba(236, 226, 208,.99)), url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    text-align: center;
+    padding: 100px 0;
+}
+header i {
+    color: var(--red);
+    font-size: 5rem;
+}
+header h1 {
+    color: var(--white);
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+header p {
+    font-size: 1.4rem;
+    padding: 20px 0;
+}
+/***************************
+o nama
+***************************/
+.four-columns {
+    padding: 70px 0;
+    text-align: center;
+}
+.four-columns h3 {
+    font-size: 2rem;
+}
+.four-columns i {
+    font-size: 5rem;
+    color: var(--red);
+    padding: 20px 0;
+}
+/***************************
+two columns
+***************************/
+.two-columns {
+    padding: 70px 0;
+    background: var(--orange);
+    color: var(--white);
+}
+.two-columns h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+.two-columns h5 {
+    font-size: 1.3rem;
+    text-align: center;
+}
+.two-columns p {
+    text-align: justify;
+}
+.two-columns img {
+    width: 100%;
+    padding: 30px 0;
+}
+.two-columns .row:nth-child(3) {
+    text-align: center;
+}
+/***************************
+three columns
+***************************/
+.three-columns {
+    padding: 70px 0;
+    background: var(--almond);
+    color: var(--text);
+    text-align: center;
+}
+.three-columns h2 {
+    font-size: 3rem;
+}
+.three-columns h5 {
+    font-size: 1.3rem;
+}
+.three-columns p {
+    padding-bottom: 30px;
+}
+.three-columns img {
+    width: 100%;
+    padding: 30px 0;
+}
+/***************************
+three columns
+***************************/
+footer {
+    padding: 70px 0;
+    text-align: center;
+    background: var(--red);
+    color: var(--white);
+}
+footer a {
+    color: var(--white);
+    letter-spacing: 2px;
+}
+/***************************
+responsive
+***************************/
+@media only screen and (max-width: 768px) {
+  /* za mobilne telefone sve kolone su sirine 100% */
+    [class*="col-"] {
+       width: 100%;
+    }
+    .container {
+        width: 95%;
+    }
+    header {
+        height: 70vh;
+    }
+    header h1 {
+        font-size: 2.3rem;
+        line-height: 1.2
+    }
+    .two-columns h2,
+    .three-columns h2 {
+        font-size: 30px;
+    }
+}
